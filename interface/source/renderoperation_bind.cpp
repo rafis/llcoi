@@ -8,7 +8,6 @@
  * MIT license applies - see file "LICENSE" for details.
 */
 #include "renderoperation_bind.h"
-#include <OgreString.h>
 #include "binding_utils.h"
 #include <OgreRenderOperation.h>
 

@@ -7,7 +7,6 @@
  * copyright (c) 2011, llcoi Team
  * MIT license applies - see file "LICENSE" for details.
 */
-#include <OgreString.h>
 #include "overlay_bind.h"
 #include "binding_utils.h"
 #include <Overlay/OgreOverlay.h>

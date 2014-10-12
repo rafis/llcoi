@@ -1,9 +1,9 @@
-/*     __ __              _ 
+/*     __ __              _
  *    / // /_____ ____   (_)
- *   / // // ___// __ \ / / 
- *  / // // /__ / /_/ // /  
- * /_//_/ \___/ \____//_/   
- * https://bitbucket.org/galaktor/llcoi 
+ *   / // // ___// __ \ / /
+ *  / // // /__ / /_/ // /
+ * /_//_/ \___/ \____//_/
+ * https://bitbucket.org/galaktor/llcoi
  * copyright (c) 2011, llcoi Team
  * MIT license applies - see file "LICENSE" for details.
 */
@@ -28,33 +28,35 @@
 #   endif
 #endif
 
-#if defined LLCOI_BUILD_STATIC
-#       if defined( __GNUC__ ) && __GNUC__ >= 4
-#           define DLL extern "C" __attribute__ ((visibility("default")))
-#       else
-#           define DLL extern "C"
-#       endif
-#else
+#if defined(LLCOI_BUILD_DYNAMIC)
 #   if defined( WIN32 ) || defined( _WINDOWS )
-#       ifdef llcoi_EXPORTS
-#           define DLL extern "C" __declspec(dllexport)
-#       else
+#       ifndef llcoi_EXPORTS
 #           define DLL __declspec(dllimport)
+#       else
+#           define DLL extern "C" __declspec(dllexport)
 #       endif
 #   else
-#       ifdef llcoi_EXPORTS
+#       ifndef llcoi_EXPORTS
+#           define DLL
+#       else
 #           if defined( __GNUC__ ) && __GNUC__ >= 4
 #               define DLL extern "C" __attribute__ ((visibility("default")))
 #           else
 #               define DLL extern "C"
 #           endif
-#       else
-#           define DLL
 #       endif
 #   endif
+#else
+#   if defined( LLCOI_BUILD_STATIC )
+#       if defined( __GNUC__ ) && __GNUC__ >= 4
+#           define DLL extern "C" __attribute__ ((visibility("default")))
+#       else
+#           define DLL extern "C"
+#       endif
+#   else
+#       define DLL
+#   endif
 #endif
-
-
 
 #include <stddef.h> // for size_t
 

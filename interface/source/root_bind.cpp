@@ -209,6 +209,12 @@ TimerHandle root_get_timer(RootHandle root_handle)
   return reinterpret_cast<TimerHandle>(timer);
 }
 
+void release_engine(RootHandle root_handle)
+{
+  Ogre::Root* root = reinterpret_cast<Ogre::Root*>(root_handle);
+  OGRE_DELETE root;
+}
+
 /*
   Ogre::Root::~Root()
   Ogre::Root::saveConfig()

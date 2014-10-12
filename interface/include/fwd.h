@@ -50,7 +50,7 @@ typedef void* InputManagerHandle;
 typedef void* KeyboardInputHandle;
 typedef void* LightHandle;
 typedef void (*loadingCompleteCB)(coiResourceHandle handle, void* userdata);
-typedef void* LogHandle;
+typedef void*  LogHandle;
 typedef void* LogListenerHandle;
 typedef void* LogManagerHandle;
 typedef void* ManualObjectHandle;

@@ -83,9 +83,11 @@ typedef struct
 DLL void render_loop();
 
 DLL RootHandle init_engine(const engine_options options);
+*/
 
 DLL void release_engine(RootHandle root_handle);
 
+/*
 DLL void default_engine_options(engine_options* options);
 
 DLL RootHandle root_singleton();

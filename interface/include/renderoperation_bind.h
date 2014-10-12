@@ -22,7 +22,7 @@ DLL operation_type renderoperation_get_operation_type(RenderOperationHandle hand
 DLL void renderoperation_set_operation_type(RenderOperationHandle handle, operation_type op_type);
 //bool useIndexes;
 DLL int renderoperation_get_use_indexes(RenderOperationHandle handle);
-DLL void renderoperation_set_use_indexes(RenderOperationHandle, bool use_indexes);
+DLL void renderoperation_set_use_indexes(RenderOperationHandle, int use_indexes);
 //IndexData *indexData;
 DLL IndexDataHandle renderoperation_get_index_data(RenderOperationHandle handle);
 DLL void renderoperation_set_index_data(RenderOperationHandle handle, IndexDataHandle index_data);

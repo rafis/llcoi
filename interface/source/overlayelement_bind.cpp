@@ -8,7 +8,6 @@
  * MIT license applies - see file "LICENSE" for details.
 */
 #include "overlayelement_bind.h"
-#include <OgreString.h>
 #include "binding_utils.h"
 #include <Overlay/OgreOverlayElement.h>
 #include <Overlay/OgreOverlay.h>
